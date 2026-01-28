@@ -86,10 +86,12 @@ AZURE_OPENAI_API_VERSION=2024-12-01-preview
 ## ▶️ Run the Project
 Start backend:
 ```bash
+cd backend
 uvicorn api:app --reload
 ```
 Start frontend:
 ```bash
+cd frontend
 streamlit run app.py
 ```
 
