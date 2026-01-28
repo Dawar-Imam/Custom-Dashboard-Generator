@@ -54,16 +54,6 @@ ROOT/
 | `.env`    | Stores Azure OpenAI credentials      |
 | `app.html`| Auto-generated webpage               |
 
-## 🔑 Environment Setup
-
-Create a .env file:
-```bash
-AZURE_OPENAI_API_KEY=your_key
-AZURE_OPENAI_ENDPOINT=https://your-resource.openai.azure.com/
-AZURE_OPENAI_DEPLOYMENT_NAME=your-deployment-name
-AZURE_OPENAI_API_VERSION=2024-12-01-preview
-```
-
 ## 📦 Installation
 ```bash
 git clone https://github.com/Dawar-Imam/Custom-Dashboard-Generator.git
@@ -81,6 +71,16 @@ python -m venv venv
 .\venv\Scripts\activate
 pip install -r backend\requirements.txt
 pip install -r frontend\requirements.txt
+```
+
+## 🔑 Environment Setup
+
+Create a .env file:
+```bash
+AZURE_OPENAI_API_KEY=your_key
+AZURE_OPENAI_ENDPOINT=https://your-resource.openai.azure.com/
+AZURE_OPENAI_DEPLOYMENT_NAME=your-deployment-name
+AZURE_OPENAI_API_VERSION=2024-12-01-preview
 ```
 
 ## ▶️ Run the Project
