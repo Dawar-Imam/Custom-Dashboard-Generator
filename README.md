@@ -66,8 +66,8 @@ AZURE_OPENAI_API_VERSION=2024-12-01-preview
 
 ## 📦 Installation
 ```bash
-git clone __
-cd __
+git clone https://github.com/Dawar-Imam/Custom-Dashboard-Generator.git
+cd Custom-Dashboard-Generator
 ```
 - Linux / Mac / Git Bash
 ```bash
