@@ -64,9 +64,23 @@ AZURE_OPENAI_DEPLOYMENT_NAME=your-deployment-name
 AZURE_OPENAI_API_VERSION=2024-12-01-preview
 ```
 
-## 📦 Install Dependencies
+## 📦 Installation
 ```bash
-pip install fastapi uvicorn streamlit requests python-dotenv langchain-openai langchain-core
+git clone __
+cd __
+```
+- Linux / Mac / Git Bash
+```bash
+chmod +x setup.sh
+./setup.sh
+```
+- Windows PowerShell (alternative)
+If .sh doesn't run:
+```bash
+python -m venv venv
+.\venv\Scripts\activate
+pip install -r backend\requirements.txt
+pip install -r frontend\requirements.txt
 ```
 
 ## ▶️ Run the Project
