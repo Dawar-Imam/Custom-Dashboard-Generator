@@ -4,3 +4,6 @@
 2026-02-02 18:51:41 - app.services.webpage_generation_pipeline - INFO - Generating webpage for user request...
 2026-02-02 18:52:03 - httpx - INFO - HTTP Request: POST https://dawar-ml0waaww-eastus2.cognitiveservices.azure.com/openai/deployments/gpt-4.1-mini/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
 2026-02-02 18:52:03 - app.services.webpage_generation_pipeline - INFO - Webpage generated successfully at D:\Dawar\ACME-ONE\AIIM-ONE\Custom Dashboard Generation\backend\frontend\generated_app.html
+2026-02-02 20:27:40 - app.services.webpage_generation_pipeline - INFO - Generating webpage for user request...
+2026-02-02 20:28:00 - httpx - INFO - HTTP Request: POST https://dawar-ml0waaww-eastus2.cognitiveservices.azure.com/openai/deployments/gpt-4.1-mini/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-02 20:28:00 - app.services.webpage_generation_pipeline - INFO - Webpage generated successfully at D:\Dawar\ACME-ONE\AIIM-ONE\Custom Dashboard Generation\frontend\generated_app.html

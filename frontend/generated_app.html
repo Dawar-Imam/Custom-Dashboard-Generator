@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Dark Theme Calculator</title>
+<style>
+  body {
+    background-color: #121212;
+    color: #eee;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  #calculator {
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    box-shadow: 0 0 15px #000;
+    width: 320px;
+    padding: 20px;
+  }
+  #display {
+    background-color: #2c2c2c;
+    color: #fff;
+    font-size: 2rem;
+    border-radius: 8px;
+    padding: 15px 20px;
+    text-align: right;
+    margin-bottom: 20px;
+    user-select: none;
+    min-height: 50px;
+    word-wrap: break-word;
+  }
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+  }
+  button {
+    background-color: #333;
+    border: none;
+    border-radius: 8px;
+    color: #eee;
+    font-size: 1.3rem;
+    padding: 15px 0;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    user-select: none;
+  }
+  button:hover {
+    background-color: #555;
+  }
+  button.operator {
+    background-color: #ff9500;
+    color: #fff;
+  }
+  button.operator:hover {
+    background-color: #e08900;
+  }
+  button.equal {
+    background-color: #0a84ff;
+    color: #fff;
+    grid-column: span 2;
+  }
+  button.equal:hover {
+    background-color: #006fdd;
+  }
+  button.clear {
+    background-color: #ff3b30;
+    color: #fff;
+  }
+  button.clear:hover {
+    background-color: #cc2a24;
+  }
+</style>
+</head>
+<body>
+  <div id="calculator">
+    <div id="display">0</div>
+    <div class="buttons">
+      <button class="clear" id="clear">C</button>
+      <button id="backspace">⌫</button>
+      <button class="operator" data-value="%">%</button>
+      <button class="operator" data-value="/">÷</button>
+
+      <button data-value="7">7</button>
+      <button data-value="8">8</button>
+      <button data-value="9">9</button>
+      <button class="operator" data-value="*">×</button>
+
+      <button data-value="4">4</button>
+      <button data-value="5">5</button>
+      <button data-value="6">6</button>
+      <button class="operator" data-value="-">−</button>
+
+      <button data-value="1">1</button>
+      <button data-value="2">2</button>
+      <button data-value="3">3</button>
+      <button class="operator" data-value="+">+</button>
+
+      <button data-value="0" style="grid-column: span 2;">0</button>
+      <button data-value=".">.</button>
+      <button class="equal" id="equals">=</button>
+    </div>
+  </div>
+
+<script>
+  const display = document.getElementById('display');
+  const buttons = document.querySelectorAll('button[data-value]');
+  const clearBtn = document.getElementById('clear');
+  const backspaceBtn = document.getElementById('backspace');
+  const equalsBtn = document.getElementById('equals');
+
+  let expression = '';
+
+  function updateDisplay() {
+    display.textContent = expression || '0';
+  }
+
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      const val = button.getAttribute('data-value');
+
+      if (val === '.' && expression.endsWith('.')) return;
+
+      // Prevent multiple operators in a row
+      if (['+', '-', '*', '/', '%'].includes(val)) {
+        if (expression === '') return;
+        if (['+', '-', '*', '/', '%'].includes(expression.slice(-1))) {
+          expression = expression.slice(0, -1);
+        }
+      }
+
+      expression += val;
+      updateDisplay();
+    });
+  });
+
+  clearBtn.addEventListener('click', () => {
+    expression = '';
+    updateDisplay();
+  });
+
+  backspaceBtn.addEventListener('click', () => {
+    expression = expression.slice(0, -1);
+    updateDisplay();
+  });
+
+  equalsBtn.addEventListener('click', () => {
+    if (expression === '') return;
+    try {
+      // Replace % with /100 for percentage calculation
+      let exp = expression.replace(/%/g, '/100');
+      // Evaluate expression safely
+      let result = Function('"use strict";return (' + exp + ')')();
+      if (result === Infinity || result === -Infinity || isNaN(result)) {
+        display.textContent = 'Error';
+        expression = '';
+      } else {
+        expression = result.toString();
+        updateDisplay();
+      }
+    } catch {
+      display.textContent = 'Error';
+      expression = '';
+    }
+  });
+
+  // Optional: keyboard support
+  window.addEventListener('keydown', e => {
+    if ((e.key >= '0' && e.key <= '9') || ['+', '-', '*', '/', '.', '%'].includes(e.key)) {
+      e.preventDefault();
+      const val = e.key === '*' ? '*' : e.key;
+      if (['+', '-', '*', '/', '%'].includes(val)) {
+        if (expression === '') return;
+        if (['+', '-', '*', '/', '%'].includes(expression.slice(-1))) {
+          expression = expression.slice(0, -1);
+        }
+      }
+      expression += val;
+      updateDisplay();
+    } else if (e.key === 'Enter' || e.key === '=') {
+      e.preventDefault();
+      equalsBtn.click();
+    } else if (e.key === 'Backspace') {
+      e.preventDefault();
+      backspaceBtn.click();
+    } else if (e.key.toLowerCase() === 'c') {
+      e.preventDefault();
+      clearBtn.click();
+    }
+  });
+</script>
+</body>
+</html>

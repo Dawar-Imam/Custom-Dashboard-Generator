@@ -19,7 +19,7 @@ def save_html_code(html_code: str) -> Path:
     html_code = re.sub(r"\n?```$", "", html_code).strip()
 
     # Save HTML file to frontend folder
-    base_dir = Path(__file__).parent.parent.parent
+    base_dir = Path(__file__).parent.parent.parent.parent
     output_dir = base_dir / "frontend"
     output_dir.mkdir(exist_ok=True)
     output_path = output_dir / "generated_app.html"
