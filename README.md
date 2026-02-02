@@ -1,4 +1,4 @@
-# 🚀 Custom Dashboard Generator App (AI Powered)
+# 🚀 Milestone 0 - Custom Dashboard Generator App (AI Powered)
 This project demonstrates generating and executing UI webpages at runtime using AI.
 
 A user describes a web app (example: "modern todo list"), and the system:
