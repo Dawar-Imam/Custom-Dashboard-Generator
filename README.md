@@ -1,4 +1,4 @@
-# Custom Dashboard Generation
+# Milestone 1 - Custom Dashboard Generation
 
 A full-stack application combining FastAPI backend and Streamlit frontend for custom dashboard generation.
 
