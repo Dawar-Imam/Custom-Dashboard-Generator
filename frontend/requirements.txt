@@ -1,0 +1,4 @@
+# Frontend dependencies
+# Streamlit framework and related packages
+streamlit
+requests
