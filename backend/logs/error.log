@@ -1,0 +1,12 @@
+2026-02-03 13:21:29 - app.services.webpage_generation_pipeline - ERROR - Error generating webpage: 'AzureChatOpenAI' object has no attribute 'predict'
+2026-02-03 13:26:09 - app.services.webpage_generation_pipeline - ERROR - Error generating webpage: 'AzureChatOpenAI' object is not callable
+2026-02-03 13:30:13 - app.services.webpage_generation_pipeline - ERROR - Error generating webpage: Expecting value: line 1 column 1 (char 0)
+2026-02-03 13:32:57 - app.services.webpage_generation_pipeline - ERROR - Error generating webpage: Expecting value: line 1 column 1 (char 0)
+2026-02-03 13:33:49 - app.services.webpage_generation_pipeline - ERROR - Error generating webpage: 'AzureChatOpenAI' object has no attribute 'predict'
+2026-02-03 13:34:26 - app.services.webpage_generation_pipeline - ERROR - Error generating webpage: 'AzureChatOpenAI' object has no attribute 'predict'
+2026-02-03 13:48:21 - app.services.webpage_generation_pipeline - ERROR - Error generating webpage: Expecting value: line 1 column 1 (char 0)
+2026-02-03 13:50:10 - app.services.webpage_generation_pipeline - ERROR - Error generating webpage: Expecting value: line 1 column 1 (char 0)
+2026-02-03 13:53:51 - app.services.webpage_generation_pipeline - ERROR - Error generating webpage: Expecting value: line 1 column 1 (char 0)
+2026-02-03 13:54:56 - app.services.webpage_generation_pipeline - ERROR - Error generating webpage: Expecting value: line 1 column 1 (char 0)
+2026-02-03 15:01:01 - app.services.webpage_generation_pipeline - ERROR - Error generating webpage: Expecting value: line 1 column 1 (char 0)
+2026-02-03 15:02:19 - app.services.webpage_generation_pipeline - ERROR - Error generating webpage: Expecting value: line 1 column 1 (char 0)
