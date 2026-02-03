@@ -116,7 +116,7 @@ AZURE_OPENAI_DEPLOYMENT_NAME=gpt-4.1-mini
 ### Step 3: Start Backend (Terminal 1)
 ```bash
 cd backend
-uvicorn api:app --reload
+uvicorn main:app --reload
 ```
 ✅ Backend will run at: `http://127.0.0.1:8000`
 
