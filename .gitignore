@@ -9,6 +9,7 @@ __pycache__/
 # Ignore HTML files
 *.html
 
+.vscode/
 
 # directories
 venv
