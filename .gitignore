@@ -4,7 +4,10 @@ rough.txt
 
 # Ignore Python cache folders
 __pycache__/
-*.pyc
+*.py[cod]
+
+.vscode/
+
 
 # Ignore HTML files (if you don't want them in Git)
 *.html
