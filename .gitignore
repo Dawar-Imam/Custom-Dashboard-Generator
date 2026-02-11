@@ -4,7 +4,7 @@ rough.txt
 
 # Ignore Python cache folders
 __pycache__/
-*.pyc
+*.py[cod]
 
 # Ignore HTML files
 *.html
