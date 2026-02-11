@@ -2,5 +2,13 @@
 .env
 rough.txt
 
+# Ignore Python cache folders
+__pycache__/
+*.pyc
+
+# Ignore HTML files
+*.html
+
+
 # directories
 venv
