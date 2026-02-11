@@ -42229,3 +42229,103 @@ For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/erro
 2026-02-11 17:45:54 - app.services.dashboard_generation_pipeline - INFO - Estimated token cost for webpage generation: $0.0186
 2026-02-11 17:45:55 - app.services.dashboard_generation_pipeline - INFO - Webpage code generated and stored successfully at D:\Dawar\ACME-ONE\AIIM-ONE\Custom Dashboard Generation\frontend\generated_app.html
 2026-02-11 17:49:36 - app.services.dashboard_generation_pipeline - INFO - Webpage opened in browser successfully.
+2026-02-11 18:51:03 - __main__ - INFO - Table already exists. Skipping creation.
+2026-02-11 18:51:03 - __main__ - INFO - Starting API server...
+2026-02-11 18:55:31 - __main__ - INFO - Table already exists. Skipping creation.
+2026-02-11 18:55:31 - __main__ - INFO - Starting API server...
+2026-02-11 19:02:25 - __main__ - INFO - Table not found. Creating...
+2026-02-11 19:02:25 - app.database.manage_db - INFO - Table created successfully.
+2026-02-11 19:02:25 - __main__ - INFO - Starting API server...
+2026-02-11 19:03:07 - __main__ - INFO - Table already exists. Skipping creation.
+2026-02-11 19:03:07 - __main__ - INFO - Starting API server...
+2026-02-11 19:05:50 - app.api.endpoints.db_insertion - INFO - Inserting new webpage template for market 'Food / Restaurant' into DB.
+2026-02-11 19:05:50 - app.database.dashboard_generation - INFO - insert_template called with market=Food / Restaurant
+2026-02-11 19:05:50 - app.database.dashboard_generation - INFO - Inserted new template id=1 for market=Food / Restaurant
+2026-02-11 19:06:25 - app.services.dashboard_generation_pipeline - INFO - Fetching market types from DB
+2026-02-11 19:06:25 - app.database.dashboard_generation - INFO - Fetched 1 unique markets from DB: ['Food / Restaurant']
+2026-02-11 19:06:25 - app.services.dashboard_generation_pipeline - INFO - Processing user request. Understanding market and dashboard requirements...
+2026-02-11 19:06:30 - httpx - INFO - HTTP Request: POST https://dawar-mlgkcj1n-eastus2.cognitiveservices.azure.com/openai/deployments/gpt-4.1-mini/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-11 19:06:30 - app.utils.time_and_cost_estimation - INFO - Market analysis LLM 1 | Execution time: 0 min 5.25 seconds
+2026-02-11 19:06:30 - app.services.dashboard_generation_pipeline - INFO - Estimated token cost for market analysis: $0.0004
+2026-02-11 19:06:37 - app.services.dashboard_generation_pipeline - INFO - LLM Selected the best market as 'Food / Restaurant' for user request, and has provided dashboard requirements.
+2026-02-11 19:06:37 - app.services.dashboard_generation_pipeline - INFO - Fetching template homepage for market 'Food / Restaurant' from DB...
+2026-02-11 19:06:39 - app.database.dashboard_generation - INFO - fetch_templates called with market=Food / Restaurant
+2026-02-11 19:06:39 - app.database.dashboard_generation - INFO - fetch_templates returning 1 templates for market=Food / Restaurant
+2026-02-11 19:06:41 - app.services.dashboard_generation_pipeline - INFO - Generating webpage for user request...
+2026-02-11 19:10:04 - httpx - INFO - HTTP Request: POST https://dawar-mlgkcj1n-eastus2.cognitiveservices.azure.com/openai/deployments/gpt-4.1-mini/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-11 19:10:04 - app.utils.time_and_cost_estimation - INFO - Webpage generation LLM 2 | Execution time: 3 min 23.36 seconds
+2026-02-11 19:10:04 - app.services.dashboard_generation_pipeline - INFO - Estimated token cost for webpage generation: $0.0191
+2026-02-11 19:10:04 - app.services.dashboard_generation_pipeline - INFO - Webpage code generated and stored successfully at D:\Dawar\ACME-ONE\AIIM-ONE\Custom Dashboard Generation\frontend\generated_app.html
+2026-02-11 19:10:05 - app.services.dashboard_generation_pipeline - INFO - Webpage opened in browser successfully.
+2026-02-11 19:17:21 - app.services.dashboard_generation_pipeline - INFO - Fetching market types from DB
+2026-02-11 19:17:21 - app.database.dashboard_generation - INFO - Fetched 1 unique markets from DB: ['Food / Restaurant']
+2026-02-11 19:17:21 - app.services.dashboard_generation_pipeline - INFO - Processing user request. Understanding market and dashboard requirements...
+2026-02-11 19:17:25 - httpx - INFO - HTTP Request: POST https://dawar-mlgkcj1n-eastus2.cognitiveservices.azure.com/openai/deployments/gpt-4.1-mini/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-11 19:17:25 - app.utils.time_and_cost_estimation - INFO - Market analysis LLM 1 | Execution time: 0 min 4.25 seconds
+2026-02-11 19:17:25 - app.services.dashboard_generation_pipeline - INFO - Estimated token cost for market analysis: $0.0004
+2026-02-11 19:17:29 - app.services.dashboard_generation_pipeline - INFO - LLM Selected the best market as 'Food / Restaurant' for user request, and has provided dashboard requirements.
+2026-02-11 19:17:29 - app.services.dashboard_generation_pipeline - INFO - Fetching template homepage for market 'Food / Restaurant' from DB...
+2026-02-11 19:17:29 - app.database.dashboard_generation - INFO - fetch_templates called with market=Food / Restaurant
+2026-02-11 19:17:29 - app.database.dashboard_generation - INFO - fetch_templates returning 1 templates for market=Food / Restaurant
+2026-02-11 19:17:29 - app.services.dashboard_generation_pipeline - INFO - Generating webpage for user request...
+2026-02-11 19:20:16 - httpx - INFO - HTTP Request: POST https://dawar-mlgkcj1n-eastus2.cognitiveservices.azure.com/openai/deployments/gpt-4.1-mini/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-11 19:20:16 - app.utils.time_and_cost_estimation - INFO - Webpage generation LLM 2 | Execution time: 2 min 47.44 seconds
+2026-02-11 19:20:16 - app.services.dashboard_generation_pipeline - INFO - Estimated token cost for webpage generation: $0.0182
+2026-02-11 19:20:16 - app.services.dashboard_generation_pipeline - INFO - Webpage code generated and stored successfully at D:\Dawar\ACME-ONE\AIIM-ONE\Custom Dashboard Generation\frontend\generated_app.html
+2026-02-11 19:20:16 - app.services.dashboard_generation_pipeline - INFO - Webpage opened in browser successfully.
+2026-02-11 19:24:40 - app.services.dashboard_generation_pipeline - INFO - Fetching market types from DB
+2026-02-11 19:24:40 - app.database.dashboard_generation - INFO - Fetched 1 unique markets from DB: ['Food / Restaurant']
+2026-02-11 19:24:40 - app.services.dashboard_generation_pipeline - INFO - Processing user request. Understanding market and dashboard requirements...
+2026-02-11 19:24:47 - httpx - INFO - HTTP Request: POST https://dawar-mlgkcj1n-eastus2.cognitiveservices.azure.com/openai/deployments/gpt-4.1-mini/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-11 19:24:47 - app.utils.time_and_cost_estimation - INFO - Market analysis LLM 1 | Execution time: 0 min 6.87 seconds
+2026-02-11 19:24:47 - app.services.dashboard_generation_pipeline - INFO - Estimated token cost for market analysis: $0.0007
+2026-02-11 19:24:47 - app.services.dashboard_generation_pipeline - INFO - LLM Selected the best market as 'Food / Restaurant' for user request, and has provided dashboard requirements.
+2026-02-11 19:24:47 - app.services.dashboard_generation_pipeline - INFO - Fetching template homepage for market 'Food / Restaurant' from DB...
+2026-02-11 19:24:47 - app.database.dashboard_generation - INFO - fetch_templates called with market=Food / Restaurant
+2026-02-11 19:24:47 - app.database.dashboard_generation - INFO - fetch_templates returning 1 templates for market=Food / Restaurant
+2026-02-11 19:24:47 - app.services.dashboard_generation_pipeline - INFO - Generating webpage for user request...
+2026-02-11 19:26:43 - httpx - INFO - HTTP Request: POST https://dawar-mlgkcj1n-eastus2.cognitiveservices.azure.com/openai/deployments/gpt-4.1-mini/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-11 19:26:43 - app.utils.time_and_cost_estimation - INFO - Webpage generation LLM 2 | Execution time: 1 min 56.06 seconds
+2026-02-11 19:26:43 - app.services.dashboard_generation_pipeline - INFO - Estimated token cost for webpage generation: $0.0167
+2026-02-11 19:26:43 - app.services.dashboard_generation_pipeline - INFO - Webpage code generated and stored successfully at D:\Dawar\ACME-ONE\AIIM-ONE\Custom Dashboard Generation\frontend\generated_app.html
+2026-02-11 19:26:44 - app.services.dashboard_generation_pipeline - INFO - Webpage opened in browser successfully.
+2026-02-11 19:26:44 - app.api.endpoints.db_insertion - INFO - Inserting new webpage template for market 'E-commerce / Retail' into DB.
+2026-02-11 19:26:44 - app.database.dashboard_generation - INFO - insert_template called with market=E-commerce / Retail
+2026-02-11 19:26:44 - app.database.dashboard_generation - INFO - Inserted new template id=2 for market=E-commerce / Retail
+2026-02-11 19:36:22 - __main__ - INFO - Table already exists. Skipping creation.
+2026-02-11 19:36:22 - __main__ - INFO - Starting API server...
+2026-02-11 19:38:51 - app.api.endpoints.db_insertion - INFO - Inserting new webpage template for market 'Healthcare / Medical' into DB.
+2026-02-11 19:38:51 - app.database.dashboard_generation - INFO - insert_template called with market=Healthcare / Medical
+2026-02-11 19:38:51 - app.database.dashboard_generation - INFO - Inserted new template id=3 for market=Healthcare / Medical
+2026-02-11 19:39:05 - app.services.dashboard_generation_pipeline - INFO - Fetching market types from DB
+2026-02-11 19:39:05 - app.database.dashboard_generation - INFO - Fetched 3 unique markets from DB: ['Food / Restaurant', 'Healthcare / Medical', 'E-commerce / Retail']
+2026-02-11 19:39:05 - app.services.dashboard_generation_pipeline - INFO - Processing user request. Understanding market and dashboard requirements...
+2026-02-11 19:39:11 - httpx - INFO - HTTP Request: POST https://dawar-mlgkcj1n-eastus2.cognitiveservices.azure.com/openai/deployments/gpt-4.1-mini/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-11 19:39:11 - app.utils.time_and_cost_estimation - INFO - Market analysis LLM 1 | Execution time: 0 min 6.14 seconds
+2026-02-11 19:39:11 - app.services.dashboard_generation_pipeline - INFO - Estimated token cost for market analysis: $0.0004
+2026-02-11 19:39:11 - app.services.dashboard_generation_pipeline - INFO - LLM Selected the best market as 'E-commerce / Retail' for user request, and has provided dashboard requirements.
+2026-02-11 19:39:11 - app.services.dashboard_generation_pipeline - INFO - Fetching template homepage for market 'E-commerce / Retail' from DB...
+2026-02-11 19:39:11 - app.database.dashboard_generation - INFO - fetch_templates called with market=E-commerce / Retail
+2026-02-11 19:39:11 - app.database.dashboard_generation - INFO - fetch_templates returning 1 templates for market=E-commerce / Retail
+2026-02-11 19:39:11 - app.services.dashboard_generation_pipeline - INFO - Generating webpage for user request...
+2026-02-11 19:41:01 - httpx - INFO - HTTP Request: POST https://dawar-mlgkcj1n-eastus2.cognitiveservices.azure.com/openai/deployments/gpt-4.1-mini/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-11 19:41:01 - app.utils.time_and_cost_estimation - INFO - Webpage generation LLM 2 | Execution time: 1 min 50.21 seconds
+2026-02-11 19:41:01 - app.services.dashboard_generation_pipeline - INFO - Estimated token cost for webpage generation: $0.0159
+2026-02-11 19:41:01 - app.services.dashboard_generation_pipeline - INFO - Webpage code generated and stored successfully at D:\Dawar\ACME-ONE\AIIM-ONE\Custom Dashboard Generation\frontend\generated_app.html
+2026-02-11 19:41:02 - app.services.dashboard_generation_pipeline - INFO - Webpage opened in browser successfully.
+2026-02-11 19:48:40 - app.services.dashboard_generation_pipeline - INFO - Fetching market types from DB
+2026-02-11 19:48:40 - app.database.dashboard_generation - INFO - Fetched 3 unique markets from DB: ['Food / Restaurant', 'Healthcare / Medical', 'E-commerce / Retail']
+2026-02-11 19:48:40 - app.services.dashboard_generation_pipeline - INFO - Processing user request. Understanding market and dashboard requirements...
+2026-02-11 19:48:46 - httpx - INFO - HTTP Request: POST https://dawar-mlgkcj1n-eastus2.cognitiveservices.azure.com/openai/deployments/gpt-4.1-mini/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-11 19:48:46 - app.utils.time_and_cost_estimation - INFO - Market analysis LLM 1 | Execution time: 0 min 5.68 seconds
+2026-02-11 19:48:46 - app.services.dashboard_generation_pipeline - INFO - Estimated token cost for market analysis: $0.0005
+2026-02-11 19:48:46 - app.services.dashboard_generation_pipeline - INFO - LLM Selected the best market as 'Healthcare / Medical' for user request, and has provided dashboard requirements.
+2026-02-11 19:48:46 - app.services.dashboard_generation_pipeline - INFO - Fetching template homepage for market 'Healthcare / Medical' from DB...
+2026-02-11 19:48:46 - app.database.dashboard_generation - INFO - fetch_templates called with market=Healthcare / Medical
+2026-02-11 19:48:46 - app.database.dashboard_generation - INFO - fetch_templates returning 1 templates for market=Healthcare / Medical
+2026-02-11 19:48:46 - app.services.dashboard_generation_pipeline - INFO - Generating webpage for user request...
+2026-02-11 19:50:55 - httpx - INFO - HTTP Request: POST https://dawar-mlgkcj1n-eastus2.cognitiveservices.azure.com/openai/deployments/gpt-4.1-mini/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-11 19:50:55 - app.utils.time_and_cost_estimation - INFO - Webpage generation LLM 2 | Execution time: 2 min 9.04 seconds
+2026-02-11 19:50:55 - app.services.dashboard_generation_pipeline - INFO - Estimated token cost for webpage generation: $0.0174
+2026-02-11 19:50:55 - app.services.dashboard_generation_pipeline - INFO - Webpage code generated and stored successfully at D:\Dawar\ACME-ONE\AIIM-ONE\Custom Dashboard Generation\frontend\generated_app.html
+2026-02-11 19:50:55 - app.services.dashboard_generation_pipeline - INFO - Webpage opened in browser successfully.

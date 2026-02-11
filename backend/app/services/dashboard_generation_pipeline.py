@@ -214,7 +214,6 @@ def generate_webpage_from_template(user_request: str) -> str:
             complete_prompt_llm2 = webpage_generation_prompt.format(
                 request=user_request,
                 market=market,
-                template_description=template['description'],
                 template_webpage=template['webpage_code'],
                 webpage_requirements=dashboard_requirements
             )

@@ -7,63 +7,83 @@ Inputs:
 2. Market:
 {market}
 
-3. Template description (for this market):
-{template_description}
-
-4. Template webpage (reference only – HTML/CSS/JS):
+3. Template webpage (reference only – HTML/CSS/JS):
 {template_webpage}
 
-5. Webpage requirements (from LLM1):
+4. Webpage requirements (from LLM1):
 {webpage_requirements}
 
 Your job:
 - Generate ONE complete, production-ready, single-file webpage.
-- The provided template webpage is for INSIGHT ONLY, not for reuse.
-- Extract high-level ideas only (market UX patterns, section concepts, interaction ideas).
-- You MUST design a NEW webpage structure, layout, and JS logic.
+- The provided template webpage is for structural and UX inspiration only.
+- You MAY follow high-level structure patterns (section flow, content grouping, UX logic) IF aligned with user requirements.
+- You MUST NOT copy-paste HTML, CSS, JS, class names, IDs, or exact layouts.
+- You MUST implement a fresh visual identity and UI system every time.
 
-CRITICAL CONSTRAINTS (STRICT):
-- DO NOT copy-paste sections, layouts, CSS blocks, or JS logic from the template.
-- DO NOT preserve the same DOM structure, class names, or JS flow.
-- The generated webpage must be clearly different in:
-  - section ordering OR section composition
-  - layout and visual hierarchy
-  - JavaScript interaction and state logic
+STRUCTURE POLICY:
+- You may reuse logical section ordering or content grouping if it matches the market.
+- However, the DOM structure, layout composition, CSS architecture, component structure, and JS implementation must be newly written.
+- The generated webpage must clearly differ in:
+  - Visual style (colors, typography, spacing system, shadows, border radius)
+  - Card/grid composition
+  - Section visual treatment
+  - Headings and content tone
+  - Interaction design implementation
+  - Micro-animations and hover logic
 
-QUALITY & CORRECTNESS REQUIREMENTS (MANDATORY):
+MANDATORY UI VARIATION REQUIREMENT:
+Every generation MUST introduce a distinct UI identity:
+- Use a different color palette and tonal system each time.
+- Use different typography pairings or font styling approaches.
+- Change card structure, highlight styles, or section emphasis methods.
+- Vary CTA treatment (button shape, outline vs filled, elevation style, etc.).
+- Adjust layout density (minimal, bold, airy, compact) per generation.
+- Modify headline phrasing style and tone (while remaining professional and aligned with the market).
+
+QUALITY & CORRECTNESS REQUIREMENTS (STRICT):
 - HTML must be valid and free of syntax errors.
 - JavaScript must run without runtime errors in a modern browser.
-- Do NOT include placeholder or broken assets.
+- No broken assets or unreachable resources.
 
 Explicit bug prevention:
 - Image handling:
-  - Use valid, reachable image URLs OR safe fallbacks (gradients, SVGs, base64, or CSS shapes).
-  - Do NOT assume external images exist without fallback.
+  - Use safe images (Unsplash with full URLs) OR gradients/SVG placeholders.
+  - Provide safe fallbacks (CSS backgrounds or inline SVGs).
 - Accessibility:
-  - Use ARIA roles ONLY when semantically necessary.
-  - Never assign invalid ARIA roles or duplicate landmark roles.
-  - Prefer native semantic HTML over ARIA.
-- Interactions / carousels / dynamic UI:
-  - Avoid interval-based DOM re-rendering.
-  - Avoid rebuilding entire sections on each interaction.
-  - Use efficient state updates and minimal DOM mutations.
-  - Carousels must not leak timers or event listeners.
+  - Use semantic HTML first.
+  - Use ARIA only when necessary.
+  - No duplicate landmark roles.
+- Interactions:
+  - No interval-based full re-renders.
+  - No inefficient DOM rebuilding.
+  - No leaking timers or event listeners.
+  - Clean state management and minimal DOM mutation.
 
-Required engineering standards:
-- Responsive layout (mobile-first).
-- Accessible by default (keyboard navigation, readable contrast).
-- Simple, maintainable JS patterns (clear state, no side effects).
-- Scalable structure: sections should be modular and logically separated.
+Engineering standards:
+- Mobile-first responsive layout.
+- Good color contrast and readable typography.
+- Keyboard accessible components.
+- Clean, modular JS logic.
+- Scalable section structure.
+- No inline JS event attributes (use addEventListener).
+
+Important:
+- The structure may follow the template’s logic if aligned with user needs.
+- The visual language, styling system, and UI tone MUST be new and distinct every time.
+- Avoid repeating previously generated color schemes or component styling patterns.
 
 Rules:
 - Output must be a SINGLE executable HTML file (HTML + CSS + JS).
 - No explanations, comments, markdown, or extra text.
 - Do NOT mention the template in the output.
-- Generate a fresh implementation every time, even for the same market.
 - Return ONLY valid JSON.
 
-Final internal check (must be satisfied before responding):
-- If output contains invalid HTML, broken assets, incorrect ARIA usage, or inefficient JS patterns → regenerate internally.
+Final internal validation before responding:
+- Check HTML validity.
+- Ensure no copied template code.
+- Confirm distinct visual styling.
+- Confirm no broken assets.
+- Confirm no JS runtime errors.
 
 Output format:
 {{
