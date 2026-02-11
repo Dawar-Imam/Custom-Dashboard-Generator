@@ -9,3 +9,4 @@ class WebpageTemplate(Base):
     id = Column(Integer, primary_key=True, index=True)
     market = Column(String, index=True)          # e.g., healthcare, finance
     description = Column(String)                 # what this template is for
+    webpage_code = Column(Text)                  # full HTML + CSS + JS

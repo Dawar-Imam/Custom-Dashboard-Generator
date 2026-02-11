@@ -42,6 +42,7 @@ def fetch_templates(market: str) -> List[Dict]:
                 "id": row.id,
                 "market": row.market,
                 "description": row.description,
+                "webpage_code": row.webpage_code
             })
 
         logger.info(f"fetch_templates returning {len(templates)} templates for market={market}")
@@ -54,7 +55,7 @@ def fetch_templates(market: str) -> List[Dict]:
 # -----------------------------
 # Insert new template (unique market)
 # -----------------------------
-def insert_template(market: str, description: str) -> int:
+def insert_template(market: str, description: str, webpage_code: str) -> int:
     logger.info(f"insert_template called with market={market}")
     try:
         db: Session = next(get_db_session())
@@ -69,6 +70,7 @@ def insert_template(market: str, description: str) -> int:
         new_entry = WebpageTemplate(
             market=market,
             description=description,
+            webpage_code=webpage_code
         )
         db.add(new_entry)
         db.commit()
@@ -84,7 +86,7 @@ def insert_template(market: str, description: str) -> int:
 # -----------------------------
 # Update template by market
 # -----------------------------
-def update_template_by_market(market: str, description: str = None) -> bool:
+def update_template_by_market(market: str, description: str = None, webpage_code: str = None) -> bool:
     logger.info(f"update_template_by_market called with market={market}")
     try:
         db: Session = next(get_db_session())
@@ -98,6 +100,8 @@ def update_template_by_market(market: str, description: str = None) -> bool:
         # Update fields if provided
         if description:
             entry.description = description
+        if webpage_code:
+            entry.webpage_code = webpage_code
 
         db.commit()
         logger.info(f"Market '{market}' updated successfully.")

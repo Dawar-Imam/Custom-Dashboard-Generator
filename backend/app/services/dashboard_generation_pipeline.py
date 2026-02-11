@@ -196,7 +196,7 @@ def generate_webpage_from_template(user_request: str) -> str:
 
             # Extract the generated webpage and save as a new template in the database
             html_code = llm2_data.generated_webpage
-            insert_template(market, llm2_data.description)
+            insert_template(market, llm2_data.description, html_code)
             logger.info(f"Inserted new template for market '{market}' into DB.")
         else:
             logger.info(f"LLM Selected the best market as '{market}' for user request, and has provided dashboard requirements.")
@@ -215,6 +215,7 @@ def generate_webpage_from_template(user_request: str) -> str:
                 request=user_request,
                 market=market,
                 template_description=template['description'],
+                template_webpage=template['webpage_code'],
                 webpage_requirements=dashboard_requirements
             )
             llm2_response = llm.generate([[HumanMessage(content=complete_prompt_llm2)]])  # double list

@@ -10,7 +10,10 @@ Inputs:
 3. Template description (for this market):
 {template_description}
 
-4. Webpage requirements:
+4. Template webpage (reference only – HTML/CSS/JS):
+{template_webpage}
+
+5. Webpage requirements (from LLM1):
 {webpage_requirements}
 
 Your job:
@@ -18,6 +21,14 @@ Your job:
 - The provided template webpage is for INSIGHT ONLY, not for reuse.
 - Extract high-level ideas only (market UX patterns, section concepts, interaction ideas).
 - You MUST design a NEW webpage structure, layout, and JS logic.
+
+CRITICAL CONSTRAINTS (STRICT):
+- DO NOT copy-paste sections, layouts, CSS blocks, or JS logic from the template.
+- DO NOT preserve the same DOM structure, class names, or JS flow.
+- The generated webpage must be clearly different in:
+  - section ordering OR section composition
+  - layout and visual hierarchy
+  - JavaScript interaction and state logic
 
 QUALITY & CORRECTNESS REQUIREMENTS (MANDATORY):
 - HTML must be valid and free of syntax errors.

@@ -24,5 +24,5 @@ async def generate_webpage(webpage_template: WebpageGenerationWithoutTemplateRes
         Dictionary containing the generated answer/webpage content.
     """
     logger.info(f"Inserting new webpage template for market '{webpage_template.market}' into DB.")
-    insert_template(webpage_template.market, webpage_template.description)
+    insert_template(webpage_template.market, webpage_template.description, webpage_template.generated_webpage)
     return Response(content="OK", status_code=status.HTTP_200_OK)

@@ -17,41 +17,10 @@ Your job:
 - Respect any explicit constraints or preferences mentioned in the user request.
 
 Additionally:
-- Produce a detailed technical and design description that explains:
+- Produce a concise description that explains:
   - Which industry the webpage is designed for
-  - The full structure of the page (all sections included and their purpose)
-  - All major frontend UI components implemented (e.g., navbar, hero, CTA, product grid, feature cards, pricing section, forms, testimonials, footer, etc.)
-  - The layout system used (grid, flexbox, containers, spacing strategy)
-  - The visual style decisions (color palette, typography hierarchy, button styles, border radius, shadows, spacing density, icon usage)
-  - The interaction patterns (hover states, transitions, animations, scroll effects, responsive behavior)
-  - Any JavaScript functionality added and how it enhances UX
-  - How the overall implementation aligns with the industry standards for the selected market
-- The description must clearly explain what was built and how it is structured, not just general UI/UX theory.
-
-Example of how to write description:
-Below is an example description text for describing hero section:
-
--------------------------------------------------------------------------------
-Hero Section
-Visual Design:
-- Gradient background: light cream to peach (135deg, #FFF8F0 to #FFE5D9)
-- Two-column grid layout (text left, image right)
-- Left column contains:
-  - Large heading: "Taste the **Love** in Every Bite" (3.5rem, "Love" in orange)
-  - Subheading: Gray text explaining the service (1.2rem)
-  - Two buttons side-by-side:
-    - "View Menu" - Orange button with shadow
-    - "Order Now" - Transparent with orange border
-- Right column: Large food photo (500px max-width, rounded corners, shadow)
-
-Button Interactions:
-- Primary button: Orange background, lifts up 3px on hover, has shadow
-- Secondary button: Transparent, fills orange on hover
-- Both have smooth 0.3s transitions
-
-Responsive Behavior:
-- On mobile: Stacks to single column, centered text, smaller heading (2.5rem) 
--------------------------------------------------------------------------------
+  - The UI/UX standards and patterns used (layout, components, visual style, interactions)
+  - Why these choices fit the selected market
 
 Rules:
 - Output must be a SINGLE HTML file containing HTML + CSS + JS.
@@ -62,6 +31,6 @@ Rules:
 Output format:
 {{
   "market": "{market}",
-  "description": "Detailed explanation of the generated webpage structure, components, styling system, interaction patterns, and how they reflect the target industry.",
+  "description": "clear explanation of the industry focus and UI/UX standards reflected in the generated webpage",
   "generated_webpage": "<!DOCTYPE html> ... full executable html ..."
 }}
