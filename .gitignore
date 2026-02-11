@@ -11,3 +11,4 @@ __pycache__/
 
 # directories
 venv
+.vscode/
