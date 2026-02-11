@@ -9,6 +9,17 @@ from dotenv import load_dotenv
 # Load environment variables
 load_dotenv()
 
+
+PG_HOST: str = os.getenv("PG_HOST")
+PG_PORT: str = os.getenv("PG_PORT", "5432")
+PG_USER: str = os.getenv("PG_USER_NAME")
+PG_PASSWORD: str = os.getenv("PG_PASSWORD")
+PG_DATABASE: str = os.getenv("PG_DATABASE")
+
+DATABASE_URL = (
+    f"postgresql+psycopg2://{PG_USER}:{PG_PASSWORD}@{PG_HOST}:{PG_PORT}/{PG_DATABASE}"
+)
+
 class Settings:
     """Application settings and configuration."""
 

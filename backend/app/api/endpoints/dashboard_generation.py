@@ -5,7 +5,7 @@ Defines API routes related to question processing and LLM interactions.
 
 from fastapi import APIRouter
 from app.schemas.schema import WebpageGenerationRequest
-from app.services.webpage_generation_pipeline import generate_webpage
+from app.services.dashboard_generation_pipeline import generate_webpage_from_template
 
 generate_dashboard_router = APIRouter()
 
@@ -20,5 +20,5 @@ async def generate_dashboard(q: WebpageGenerationRequest):
     Returns:
         Dictionary containing the generated answer/webpage content.
     """
-    message = generate_webpage(q.text)
+    message = generate_webpage_from_template(q.text)
     return {"answer": message}

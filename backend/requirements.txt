@@ -9,3 +9,11 @@ langchain
 langchain-openai
 langchain-core
 openai
+langchain-community
+
+# Database and ORM
+sqlalchemy 
+psycopg2-binary
+
+# other utilities
+tiktoken

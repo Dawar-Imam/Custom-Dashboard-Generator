@@ -13,13 +13,13 @@ st.set_page_config(
 )
 
 # Title and description
-st.title("🚀 AI Runtime Webpage Generator")
-st.markdown("Generate custom webpages by describing what you want!")
+st.title("🚀 AI Runtime Dashboard Generator")
+st.markdown("Generate custom homepage for your product!")
 
 # Input section
 question = st.text_input(
-    "Describe the webpage/app you want:",
-    placeholder="e.g., A calculator app with a dark theme...",
+    "Describe the dashboard you want:",
+    placeholder="e.g., Design a colorful homepage for a homemade food items...",
     help="Be descriptive about the design, functionality, and requirements",
 )
 
