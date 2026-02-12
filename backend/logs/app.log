@@ -42329,3 +42329,21 @@ For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/erro
 2026-02-11 19:50:55 - app.services.dashboard_generation_pipeline - INFO - Estimated token cost for webpage generation: $0.0174
 2026-02-11 19:50:55 - app.services.dashboard_generation_pipeline - INFO - Webpage code generated and stored successfully at D:\Dawar\ACME-ONE\AIIM-ONE\Custom Dashboard Generation\frontend\generated_app.html
 2026-02-11 19:50:55 - app.services.dashboard_generation_pipeline - INFO - Webpage opened in browser successfully.
+2026-02-11 21:54:19 - __main__ - INFO - Table already exists. Skipping creation.
+2026-02-11 21:54:19 - __main__ - INFO - Starting API server...
+2026-02-11 21:55:30 - app.services.dashboard_generation_pipeline - INFO - Fetching market types from DB
+2026-02-11 21:55:30 - app.database.dashboard_generation - INFO - Fetched 3 unique markets from DB: ['Food / Restaurant', 'Healthcare / Medical', 'E-commerce / Retail']
+2026-02-11 21:55:30 - app.services.dashboard_generation_pipeline - INFO - Processing user request. Understanding market and dashboard requirements...
+2026-02-11 21:55:34 - httpx - INFO - HTTP Request: POST https://dawar-mlgkcj1n-eastus2.cognitiveservices.azure.com/openai/deployments/gpt-4.1-mini/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-11 21:55:35 - app.utils.time_and_cost_estimation - INFO - Market analysis LLM 1 | Execution time: 0 min 4.88 seconds
+2026-02-11 21:55:35 - app.services.dashboard_generation_pipeline - INFO - Estimated token cost for market analysis: $0.0004
+2026-02-11 21:55:35 - app.services.dashboard_generation_pipeline - WARNING - LLM selected market 'Real Estate / Property' which is not in the list of available markets: ['Food / Restaurant', 'Healthcare / Medical', 'E-commerce / Retail']
+2026-02-11 21:55:35 - app.services.dashboard_generation_pipeline - INFO - Creating webpage without template for user request...
+2026-02-11 21:57:12 - httpx - INFO - HTTP Request: POST https://dawar-mlgkcj1n-eastus2.cognitiveservices.azure.com/openai/deployments/gpt-4.1-mini/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-11 21:57:12 - app.utils.time_and_cost_estimation - INFO - Webpage generation without template LLM 2 | Execution time: 1 min 37.64 seconds
+2026-02-11 21:57:12 - app.services.dashboard_generation_pipeline - INFO - Estimated token cost for webpage generation without template: $0.0111
+2026-02-11 21:57:12 - app.database.dashboard_generation - INFO - insert_template called with market=Real Estate / Property
+2026-02-11 21:57:12 - app.database.dashboard_generation - INFO - Inserted new template id=4 for market=Real Estate / Property
+2026-02-11 21:57:12 - app.services.dashboard_generation_pipeline - INFO - Inserted new template for market 'Real Estate / Property' into DB.
+2026-02-11 21:57:12 - app.services.dashboard_generation_pipeline - INFO - Webpage code generated and stored successfully at D:\Dawar\ACME-ONE\AIIM-ONE\Custom Dashboard Generation\frontend\generated_app.html
+2026-02-11 21:57:12 - app.services.dashboard_generation_pipeline - INFO - Webpage opened in browser successfully.
