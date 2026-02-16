@@ -198,7 +198,7 @@ graph TB
         R["FastAPI Router"]
         E["POST/api/dashboard_generation 
         backend/app/api/endpoints/dashboard_generation.py "]
-        P["backend/app/services/webpage_generation_pipeline.py"]
+        P["backend/app/services/dashboard_generation_pipeline.py"]
         S["PostgreSQL Database"]
         R --> E --> P
     end
@@ -321,7 +321,7 @@ pip install -r frontend/requirements.txt
 
 To run streamlit app from root directory use the following command:
 ```bash
-streamlit run ronten/app/main.py
+streamlit run frontend/app/main.py
 ```
 ✅ Frontend will run at: `http://localhost:8501`
 
