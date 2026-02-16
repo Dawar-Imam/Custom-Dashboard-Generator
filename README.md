@@ -187,7 +187,6 @@ graph TB
         E["POST/api/dashboard_generation 
         backend/app/api/endpoints/dashboard_generation.py "]
         P["backend/app/services/webpage_generation_pipeline.py"]
-        S["backend/app/utils/save_generated_snippet.py"]
         R --> E --> P
     end
  
@@ -209,7 +208,7 @@ graph TB
     C --> R
     P <--> LLM
     P --> Resp
-    P <--> S
+
     
     %% Styling
     %% Titles - light grey
