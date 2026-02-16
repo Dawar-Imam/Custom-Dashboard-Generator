@@ -42347,3 +42347,5 @@ For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/erro
 2026-02-11 21:57:12 - app.services.dashboard_generation_pipeline - INFO - Inserted new template for market 'Real Estate / Property' into DB.
 2026-02-11 21:57:12 - app.services.dashboard_generation_pipeline - INFO - Webpage code generated and stored successfully at D:\Dawar\ACME-ONE\AIIM-ONE\Custom Dashboard Generation\frontend\generated_app.html
 2026-02-11 21:57:12 - app.services.dashboard_generation_pipeline - INFO - Webpage opened in browser successfully.
+2026-02-16 11:33:03 - __main__ - INFO - Table already exists. Skipping creation.
+2026-02-16 11:33:03 - __main__ - INFO - Starting API server...
